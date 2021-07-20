@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #212f48;
+}
+
+.box {
+    width: 600px;
+    height: 390px;
+    overflow: hidden;
+}
+
+.box img{
+    width: 100%;
+    transition: 15s;
+}
+
+.box:hover img{
+    transform: translateY(calc(-100% + 400px));
+}
+
