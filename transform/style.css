@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: cadetblue;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+    flex-direction: column;
+    align-items: center;
+}
+
+.objects{
+    margin: 50px 30%;
+    width: 40%;
+}
+
+.object{
+    width: 100%;
+    border: 5px black solid;
+}
+
+.heading{
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px black solid;
+}
+
+button{
+    background: transparent;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.box{
+    background: chocolate;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.rotate{
+    animation: rotate 5s infinite;
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.scale{
+    animation: scale 1s infinite;
+}
+
+@keyframes scale {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.2);
+    }
+}
+
+.transition{
+    animation: transition 2s infinite;
+}
+
+@keyframes transition {
+    0%{
+        transform: translate(0%);
+    }
+    100%{
+        transform: translate(20%);
+    }
+}
+
+.skew{
+    animation: skew 2s infinite;
+}
+
+@keyframes skew {
+    0%{
+        transform: skew(0deg);
+    }
+    100%{
+        transform: skew(30deg);
+    }
+}
