@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle{
+    width: 200px;
+    height: 200px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.logo{
+    background: url(./logo.jpg);
+    background-size: cover;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    border-radius: 50%;
+    /* filter: grayscale() contrast(1.5) brightness(1.3); */
+}
+
+.text{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: animateText 10s linear infinite;
+}
+
+.text span{
+    position: absolute;
+    left: 50%;
+    font-size: 1.2em;
+    transform-origin: 0 100px;
+}
+
+@keyframes animateText {
+    0%{
+        transform: rotate(360deg);
+    }
+}
