@@ -1,0 +1,101 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+section{
+    height: 100vh;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+section::before{
+    content: '';
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(#ffc107, #e91e63);
+    border-radius: 50%;
+    transform: translate(-250px, -120px);
+    position: absolute;
+}
+
+section::after{
+    content: '';
+    width: 350px;
+    height: 350px;
+    background: linear-gradient(#2196f3, #31ff38);
+    border-radius: 50%;
+    transform: translate(250px, 120px);
+    position: absolute;
+}
+
+.box{
+    min-width: 350px;
+    min-height: 400px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
+    backdrop-filter: blur(30px);
+    padding: 20px;
+}
+
+ion-icon{
+    width: 60px;
+    height: 60px;
+    border: 1px solid black;
+    margin-right: 10px;
+}
+
+.card{
+    display: flex;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 5px 0;
+    background: rgba(0, 0, 0, 0.1);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.card:hover{
+    background: white;
+    transform: scale(1.1) translateX(30px) translateY(-15px);
+}
+
+.content{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.card:hover .content{
+    color: #000;
+}
+
+.rank{
+    position: absolute;
+    right: -50px;
+    color: #2196f3;
+}
+
+small{
+    opacity: 0.5;
+    font-weight: 500;
+}
+
+.card:hover .rank{
+    right: 20px;
+    transition: 0.3s;
+}
