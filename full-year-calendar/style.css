@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Quicksand:wght@300;400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Inter:wght@400;600;800&family=Island+Moments&family=Quicksand:wght@300;400;500;600&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    background: #f1fbff;
+}
+
+.calendar{
+    background: #f1fbff;
+    padding: 20px 40px;
+    max-width: 1100px;
+    overflow: unset;
+}
+
+.months-container{
+    gap: 40px;
+    justify-content: center;
+}
+
+.calendar .months-container .month-container.month-3{
+    background: #fff;
+    box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    min-width: 280px;
+    
+}
+
+.calendar table.month th.month-title{
+    font-family: "Dancing Script", sans-serif;
+    font-weight: 600;
+    font-size: 1.9em;
+    color: gray;
+}
+
+.calendar table.month td:first-child,
+.calendar table.month td:last-child
+{
+    color: red;
+}
+
+.calendar table.month thead tr:nth-child(2) th:first-child,
+.calendar table.month thead tr:nth-child(2) th:last-child
+{
+    color: red;
+}
+
+.calendar table.month td.day .day-content:hover{
+ background: #f75c90;
+}
+
+.calendar .calendar-header .year-title:hover{
+    background: transparent;
+}
+
+.calendar .calendar-header{
+    border: none;
+}
+
+.calendar .calendar-header .year-title{
+    font-size: 4em;
+    color: #f75c90;
+    font-family: "Dancing Script";
+}
+
+.calendar .calendar-header .year-neighbor{
+    font-size: 2.5em;
+}
+
+.calendar .calendar-header .year-neighbor2{
+    font-size: 1.5em;
+}
