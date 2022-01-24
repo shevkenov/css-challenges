@@ -1,0 +1,71 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+svg {
+  border: black solid 5px;
+}
+
+.ging-body {
+  fill: #cd803d;
+}
+
+.limb {
+  stroke: #cd803d;
+  stroke-width: 35px;
+  stroke-linecap: round;
+}
+
+.mouth {
+  fill: white;
+  width: 16px;
+  height: 5px;
+}
+
+.eye {
+  fill: white;
+}
+
+.button {
+  fill: black;
+}
+
+.minutes {
+  fill: transparent;
+  stroke: #f0f0c9;
+  stroke-width: 7;
+  stroke-dasharray: 0.2 0.8;
+  stroke-dashoffset: 0.1;
+}
+
+.hours {
+  fill: transparent;
+  stroke: #000;
+  stroke-width: 7;
+  stroke-dasharray: 0.2 4.8;
+  stroke-dashoffset: 0.1;
+}
+
+.hours-hand{
+    stroke: brown;
+    stroke-width: 1;
+}
+
+.hours-hand-thick{
+    stroke: brown;
+    stroke-width: 7;
+    stroke-linecap: round;
+}
+
+.seconds-hand{
+    stroke: burlywood
+}
