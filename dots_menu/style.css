@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #10131c;
+}
+
+.farm{
+    position: relative;
+    width: 70px;
+    height: 70px;
+    background: #212532;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    border-radius: 5px;
+    cursor: pointer;
+    transition-delay: 0.8s;
+}
+
+.farm p{
+    position: absolute;
+    color: #fff;
+    top: -45px;
+    font-family: system-ui;
+    font-size: 26px;
+    opacity: 0;
+    transition: opacity 0.5s;
+    transition-delay: 0.8s;
+}
+
+.farm.active p{
+    opacity: 1;
+}
+
+.active{
+    width: 200px;
+    height: 200px;
+}
+
+.farm span{
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #fff;
+    transition: transform 0.5s, width 0.5s, height 0.5s, background 0.5s;
+    transform: translate(calc(12px * var(--x)), calc(12px * var(--y)));
+    transition-delay: calc(0.1s * var(--i));
+}
+
+.farm.active span{
+    width: 45px;
+    height: 45px;
+    background: #333849;
+    transform: translate(calc(60px * var(--x)), calc(60px * var(--y)))
+}
+
+.farm img{
+    width: 0;
+    transition: 0.5s;
+}
+
+.farm.active img{
+    width: 44px;
+}
