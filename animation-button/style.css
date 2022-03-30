@@ -1,0 +1,40 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    border: 4px rgb(63, 191, 241) solid;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 2rem;
+    background: #FFF;
+    color: rgb(63, 191, 241);
+    font-weight: 800;
+    transition: 1000ms ease-in-out;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(50%);
+    animation: fade 1000ms ease-in-out forwards;
+}
+
+@keyframes fade {
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+button:hover{
+    transform: translate(-15px, -15px);
+    background: rgb(63, 191, 241);
+    color: #fff;
+    transition: transform 1000ms ease-in-out;
+}
