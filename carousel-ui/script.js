@@ -1,3 +1,7 @@
+const images = document.querySelectorAll('img');
+const bar = document.querySelector('.bar');
+const slider = document.querySelector('.slider');
+
 document.addEventListener('click', e => {
     let handler;
     if(e.target.matches('.handler')){
@@ -9,15 +13,41 @@ document.addEventListener('click', e => {
     if(handler){
         slideHandler(handler);
     }
-})
+});
+
+function getIndex(){
+    return parseInt(getComputedStyle(slider).getPropertyValue('--slider-index'));
+}
+
+function getItemsCount(){
+    return getComputedStyle(slider).getPropertyValue('--items-per-screen')
+}
+
+function calculateProgressBar(){
+    
+    const barsCount = (images.length / getItemsCount())
+    bar.innerHTML = ""
+    
+    for (let i = 0; i < barsCount; i++) {
+        const dash = document.createElement('div');
+        dash.classList.add('dash');
+        bar.append(dash);
+
+        if(getIndex() === i){
+            dash.classList.add('active')
+        }
+    }
+}
+
+calculateProgressBar()
+
 
 function slideHandler(handler){
-    const slider = document.querySelector('.slider');
-    const images = document.querySelectorAll('img');
-    const section = parseInt(images.length / 4);
-    console.log(section) 
-    const index = parseInt(getComputedStyle(slider).getPropertyValue('--slider-index'));
-
+    const index = getIndex();
+    const itemsPerScreen = getItemsCount();
+    const section = parseInt(images.length / itemsPerScreen);
+    console.log(section)
+    
     if(handler.classList.contains('left-handler')){
         if(index === 0){
             slider.style.setProperty("--slider-index", section)
@@ -32,5 +62,6 @@ function slideHandler(handler){
             slider.style.setProperty("--slider-index", index + 1)
         }
     }
+    calculateProgressBar()
 
 }
